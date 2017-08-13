@@ -29,12 +29,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :virtualbox do |provider|
     provider.memory = PROVIDER_MEMORY
     provider.cpus = PROVIDER_CPU_NUM
-    provider.name = PROVIDER_MEMORY
+    provider.name = PROVIDER_NAME
   end
   config.vm.provider :vmware_fusion do |provider|
     provider.vmx["memsize"] = PROVIDER_MEMORY
     provider.vmx["numvcpus"] = PROVIDER_CPU_NUM
-    provider.vmx["displayName"] = PROVIDER_MEMORY
+    provider.vmx["displayName"] = PROVIDER_NAME
   end
 
   # provisioners
